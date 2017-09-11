@@ -9,6 +9,7 @@ class Char(object):
         self.traits = ""
         self.level = 1
         self.cla = ""
+        self.fp = ""
 player = Char()
 R = input("What is your race?")
 r = R.lower()
@@ -56,11 +57,20 @@ if "rock gnome" in r:
     player.traits += " adept at puzzling out magic items, alchemical objects and technological devices, and starting the game with a set of tinker's tools that let them cobble together small, harmless gizmos like clockwork toys, fire starters and music boxes. In the corebook, it's explicitly stated that these should be used for playing Tinker Gnomes if you're running a Dragonlance game."
 if "half elf" in r:
     player.char += 2
-input("also get +1 to two other ability scores of their choice,")
-
-
-
-
+    player.fp += 2
+    player.traits += "automatically proficient in two skills of their choice, as well as retaining the darkvision and resistances to charming and sleep of their elven ancestors. They can also grow beards, something that may have been in previous editions, but is directly addressed in this one"
+    print("also get +1 to two other ability scores of their choice, this is added to your free points pool cant use it towards your charisma.")
+    print("Any kind of half-elf can trade for an upgrade to darkvision and proficiency in perception, half-high elves can gain a wizard cantrip, half-wood elves can gain a five foot speed boost or an improved ability to hide in the wild, and both of the above can gain elf weapon training. Meanwhile, half-drow gain drow magic, while half-Aquatic Elves have a 30-ft swim speed. ")
+if "half-orc" in r:
+    player.str += 2
+    player.con += 1
+    player.traits += "automatically proficient in the Intimidation skill, are harder to kill than other races, and deal much nastier criticals with melee weapons."
+if "halfling" in r:
+    player.dex += 2
+    player.traits += "lucky trait lets them reroll various results of one"
+    player.traits += "they're resistant to fear effects and they can move through spaces occupied by creatures that are Medium-sized or bigger."
+if "lightfoot halfling" in r:
+    
 
 
 
